@@ -1,22 +1,26 @@
 import './App.css';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+// import { Route } from 'react-router';
+
 import { Grid } from '@material-ui/core';
 import Header from './Header';
-
+import OrderPage from './pages/OrderPage';
+import HomePage from './pages/HomePage';
+import HeaderContainer from './components/HeaderContainer';
+import HeaderTable from './components/OrdersTable';
 function App() {
   return (
-    <Grid container direction='column'>
-      <Header />
+    <div id = "home-page">
+    < Header />
+    {/* <HeaderContainer page = "Home Page"/>
+    <HeaderTable/> */}
 
-      <Grid item container>
-        <Grid item xs={0} sm={2} />
-        <Grid item xs={12} sm={8}>
-          Content Content Content Content Content Content Content Content
-          Content Content Content Content Content Content Content Content
-          Content Content Content Content Content Content Content Content
-        </Grid>
-        <Grid item xs={0} sm={2} />
-      </Grid>
-    </Grid>
+    {/* <switch>
+      <Route exact path = '/' component = {HomePage}></Route>
+      <Route exact path = '/orders' component = {OrderPage}></Route>
+    </switch> */}
+    </div>
+    
   );
 }
 

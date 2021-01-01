@@ -1,4 +1,7 @@
-
+.navigation-bar{
+    display: flex;
+    list-style: none;
+}
 
 
 
