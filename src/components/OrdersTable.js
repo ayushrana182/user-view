@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -46,18 +46,19 @@ const useStyles = makeStyles({
 
 export default function CustomizedTables() {
   const classes = useStyles();
-  var points = new Array(100);
+  // var points = new Array(100);
   
-  for (var i = 0; i < 100; i++) {
-      points[i] = i + 1; //This populates the array.  +1 is necessary because arrays are 0 index based and you want to store 1-100 in it, NOT 0-99.
-  }
+  // for (var i = 0; i < 100; i++) {
+  //     points[i] = i + 1; //This populates the array.  +1 is necessary because arrays are 0 index based and you want to store 1-100 in it, NOT 0-99.
+  // }
 
-  for (var i = 0; i < points.length; i++) {
-      console.log(points[i]); //This prints the values that you stored in the array
-  }
+  // for (var i = 0; i < points.length; i++) {
+  //     console.log(points[i]); //This prints the values that you stored in the array
+  // }
+  const [count, setCount] = useState(0);
   return (
     <Container maxWidth="lg">
-      <h1>Table {i}</h1>
+      <h1>Table {count+1}</h1>
       <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="customized table">
         <TableHead>
