@@ -1,7 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 import { Button, AppBar, Toolbar, Grid } from '@material-ui/core';
+import { NavLink } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import HomeIcon from '@material-ui/icons/Home';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
@@ -11,62 +11,52 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 // Use Styles
 const useStyles = makeStyles((theme) => ({
   root: {
-    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+    //  background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 70%)',
   },
 }));
 
 const Header = () => {
   const classes = useStyles();
   return (
-    <Grid container>
-      <AppBar position='sticky' color='transparent' className={classes.root}>
-        <Toolbar>
-          <Router>
+    <>
+      <Grid container justify='space-evenly'>
+        <AppBar position='sticky' color='transparent' className={classes.root}>
+          <Toolbar>
             <Grid item xs={6} sm={3}>
-              <Link to='/'>
-                <Button color='black'>
+              <NavLink to='/'>
+                <Button color='default'>
                   <HomeIcon /> Home
                 </Button>
-              </Link>
+              </NavLink>
             </Grid>
-
             <Grid item xs={6} sm={3}>
-              <Link to='/Cart'>
-                <Button color='black'>
+              <NavLink to='/cart'>
+                <Button color='default'>
                   <ShoppingCartIcon />
                   Cart
                 </Button>
-              </Link>
+              </NavLink>
             </Grid>
-
             <Grid item xs={6} sm={3}>
-              <Link to='/User'>
-                <Button color='black'>
+              <NavLink to='/user'>
+                <Button color='default'>
                   <AccountCircleIcon />
                   User
                 </Button>
-              </Link>
+              </NavLink>
             </Grid>
-
             <Grid item xs={6} sm={3}>
-              <Link to='/CheckOut'>
-                <Button color='black'>
+              <NavLink to='/checkout'>
+                <Button color='default'>
                   <ExitToAppIcon />
                   Check Out
                 </Button>
-              </Link>
+              </NavLink>
             </Grid>
-
-            <Switch>
-              <Route exact path='/'></Route>
-              <Route path='/Cart'></Route>
-              <Route path='/User'></Route>
-              <Route path='/CheckOut'></Route>
-            </Switch>
-          </Router>
-        </Toolbar>
-      </AppBar>
-    </Grid>
+          </Toolbar>
+        </AppBar>
+      </Grid>
+    </>
   );
 };
 
