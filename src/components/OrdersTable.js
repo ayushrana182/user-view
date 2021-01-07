@@ -57,8 +57,33 @@ export default function CustomizedTables() {
   // }
   const [count, setCount] = useState(0);
   return (
+    
     <Container maxWidth="lg">
+      <br/>
       <h1>Table {count+1}</h1>
+      <TableContainer component={Paper}>
+      <Table className={classes.table} aria-label="customized table">
+        <TableHead>
+          <TableRow>
+            <StyledTableCell>Order Item</StyledTableCell>
+            <StyledTableCell align="right">Quantity</StyledTableCell>
+            <StyledTableCell align="right">Note&nbsp;</StyledTableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {rows.map((row) => (
+            <StyledTableRow key={row.name}>
+              <StyledTableCell component="th" scope="row">{row.Name}</StyledTableCell>
+              <StyledTableCell align="right">{row.Quantity}</StyledTableCell>
+              <StyledTableCell align="right">{row.Note}</StyledTableCell>
+            </StyledTableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+<br/>
+<br/>
+    <h1>Table {count+2}</h1>
       <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="customized table">
         <TableHead>

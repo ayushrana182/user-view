@@ -24,31 +24,33 @@ export class App extends Component {
     
 		return (
 			<div className="page">
-				<div className="container">
-					<h1 className="heading">Complete your Profile</h1>
-					<div className="img-holder">
-						<img width = '250px' height = '250px' src={profileImg} alt="" id="img" className="img" />
-					</div>
-					<input type="file" accept="image/*" name="image-upload" id="input" onChange={this.imageHandler} />
-					<div className="label">
-              <label className="image-upload" htmlFor="input">
-              <CloudUploadIcon/> Resturent Logo
-					</label>
+				{/* <div className="restro-container"> */}
+        <div className="dp-image">
+          <div className="restro-container">
+            <div className="img-holder">
+              <img width = '250px' height = '250px' src={profileImg} alt="" id="img" className="img" />
+            </div>
+            <input type="file" accept="image/*" name="image-upload" id="input" onChange={this.imageHandler} />
+            <div className="label">
+                <label className="image-upload" htmlFor="input">
+                <CloudUploadIcon/> Resturent Logo
+            </label>
+            </div>
           </div>
-				</div>
-        <form id="standard-full-width" fullWidth noValidate autoComplete="off" className = "">
-          <TextField id="outlined-basic" label="Restaurent Name" variant="outlined" style = {{width: '60vw'}}/>
-          <br/>
-          <div className="description-section">
-            {/* <label for="restro-description" className = "">Restaurent Description</label> */}
-            <textarea id="restro_review" name="w3review" rows="4" cols="80" placeholder = "Describe your restaurant  here">
-            
-              </textarea>
-              <br/>
-              {/* <input type="submit" value="Submit"/> */}
-            <button type = "submit"value="Submit" className = "restro-btn">Submit</button>
-          </div>
-        </form>
+          {/* <form id="standard-full-width" fullWidth noValidate autoComplete="off" className = "">
+            <TextField id="outlined-basic" label="Restaurent Name" variant="outlined" className = "rest-name"/>
+            <br/>
+            <div className="description-section">
+              <textarea id="restro_describe" name="w3review" rows="4" cols="80" placeholder = "Describe your restaurant  here">
+              
+                </textarea>
+                <br/>
+              <button type = "submit"value="Submit" className = "restro-btn">Submit</button>
+            </div>
+          </form> */}
+        </div>
+
+        {/* </div> */}
         
 			</div>
 		);

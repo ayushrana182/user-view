@@ -30,13 +30,14 @@ import { withStyles } from "@material-ui/core/styles";
 
 const styles = theme => ({
   root: {
-    backgroundColor: theme.palette.background.paper,
-    width: 1200,
+    backgroundColor: '#f3c30',
+    width: 1000,
     display: "flex",
     justifyContent: "flex-end",
     alignItems: "flex-end",
     position: 'absolute',
-    top: '71px'
+    top: '71px',
+    right: '0'    
   },
   icon: {
     margin: theme.spacing.unit * 2
