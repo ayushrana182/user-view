@@ -9,6 +9,7 @@ import HomePage from './pages/HomePage';
 import OrderPage from './pages/OrderPage';
 import BillingPage from './pages/BillingPage'
 import Page404 from './pages/Page404';
+import ReviewPage from './pages/ReviewPage';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -18,7 +19,7 @@ ReactDOM.render(
         <Route exact path = "/" > <HomePage /> </Route> 
         <Route path = "/cart" > <OrderPage /> </Route> 
         <Route path = "/Billing" > <BillingPage /> </Route> 
-
+        <Route path = "/review" > <ReviewPage /> </Route>
 
         <Route path = "*" > <Page404 /> </Route>
       </Switch>

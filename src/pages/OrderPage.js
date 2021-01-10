@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../components/Footer.component';
 
 import HeaderContainer from '../components/HeaderContainer';
 import OrdersTable from '../components/OrdersTable';
@@ -6,8 +7,9 @@ import OrdersTable from '../components/OrdersTable';
 const Orderpage = () => {
     return ( 
         <div id = "order-page">
-            <HeaderContainer page = "Order Page "/>
+            <HeaderContainer page = "Orders Page "/>
             <OrdersTable />
+            <Footer />
         </div>
 
      );

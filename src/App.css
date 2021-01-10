@@ -1,7 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400&display=swap');
+* {
+    overflow-x: hidden;
+}
+body {
+overflow-x: hidden;
+
+    font-family: "Open Sans", sans-serif;
+  }
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+font-family: "roboto", sans-serif;
+}
+.restro-container{
+  margin: 0 10%;
+}
 .navigation-bar{
     display: flex;
     list-style: none;
 }
+.align-center{
+  display: flex;
+  justify-content: center;
+}
+.navigation-bar ul{
+    background-color: #f3c300;
+    margin: 0;
+    height: 52px;
+    padding-top: 22px !important;
+}
+.navigation-bar li{
+    overflow: hidden;
+}
+.navigation-bar ul li a{
+    color: #fff;
+}
+.selected {
+    font-weight: 900;
+    font-size: 26px;
+    color: #383b44 !important;
+}
+.navigation-bar{
+    width: 100%;
+  }
+  .navigation-bar ul{
+    padding: 0;
+  display: flex;
+  justify-content: space-around;
+      list-style: none;
+      width: 100%;
+  }
+  .navigation-bar li a{
+    text-decoration: none;
+  }
+  @media all and (max-width: 390px) {
+    .navigation-bar ul li a {
+     display: flex;
+     flex-direction: column;
+    }
+  }
+  button#dropbtn{
+    background: #f3c300;
+    color: #fff;
+    font-size: 24px;
+    border: none;
+    cursor: pointer !important;
+  }
+  button#dropbtn:focus{
+    border: none;
+    cursor: pointer !important;
+    color: #383b44;
+  }
+  /* Feedback  */
+  .feedback-body label{
+    overflow: hidden;
+  }
+  /* Footer */
+  .restro-footer{
+    background-color: #273238;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    padding: 40px 10%;
+  }
+  .restro-footer .Footer-cols,.Subscribe-col{
+    padding-right: 0;
+  }
+  .restro-footer .Footer-cols,.Subscribe-col h6{
+    text-transform: uppercase;
+        font-size: 1rem;
+  }
+  .restro-footer ul{
+    list-style: none;
+        padding: 0 !important;
+  }
+
 
 
 

@@ -12,13 +12,7 @@ function App() {
   return (
     <div id = "home-page">
     < Header />
-    {/* <HeaderContainer page = "Home Page"/>
-    <HeaderTable/> */}
-
-    {/* <switch>
-      <Route exact path = '/' component = {HomePage}></Route>
-      <Route exact path = '/orders' component = {OrderPage}></Route>
-    </switch> */}
+    
     </div>
     
   );

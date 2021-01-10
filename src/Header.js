@@ -9,7 +9,9 @@ import HomeIcon from '@material-ui/icons/Home';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
- 
+import ListAltIcon from '@material-ui/icons/ListAlt';
+import ArrowDropDownCircleIcon from '@material-ui/icons/ArrowDropDownCircle';
+import dropdown from './components/dropdown'
 // Use Styles
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,19 +22,24 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Header = () => {
+  const navigationLinks = {}
   const classes = useStyles();
   return (
     <Grid container>
-      <AppBar position='sticky' color='transparent' className={classes.root}>
-        <Toolbar>
+      {/* <AppBar position='sticky' color='transparent' className={classes.root}> */}
+        {/* <Toolbar> */}
           {/* <Router> */}
 
           <div className="navigation-bar">
             <ul>
-              <li><NavLink to = '/'> <AccountCircleIcon /> Profile </NavLink> </li> 
-              <li><NavLink to = '/cart'> <ShoppingCartIcon /> Orders</NavLink></li>
-              <li><NavLink to = '/Billing'> <ShoppingCartIcon /> Billing</NavLink></li>
-              <li><NavLink to = '/me'> <ShoppingCartIcon /> Cafe Name</NavLink></li>
+              <li><NavLink to = '/' activeClassName="selected" exact> <AccountCircleIcon /> Profile </NavLink> </li> 
+              <li><NavLink to = '/cart' activeClassName="selected">  <ShoppingCartIcon /> Orders</NavLink></li>
+              <li><NavLink to = '/Billing' activeClassName="selected"> <ListAltIcon/> Billing</NavLink></li>
+              {/* <li><NavLink to = '/me' activeClassName="selected">  Cafe Name <ArrowDropDownCircleIcon />  </NavLink></li> */}
+              <li> <button onclick="myFunction()" className="dropbtn" id = "logout-btn">Logout <ExitToAppIcon /></button>
+              
+               </li>
+
             </ul>
           </div>
 
@@ -79,8 +86,8 @@ const Header = () => {
             </Switch> */}
 
           {/* </Router> */}
-        </Toolbar>
-      </AppBar>
+        {/* </Toolbar> */}
+      {/* </AppBar> */}
     </Grid>
   );
 };

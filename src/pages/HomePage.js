@@ -2,14 +2,26 @@ import React from 'react'
 import HeaderContainer from '../components/HeaderContainer'
 import ProfileImage from '../components/ProfileImage'
 import MenuCard from '../components/MenuCard'
-import PhotoUpload from '../components/PhotoUpload'
+import CoverImage from '../components/CoverImage'
+import Grid from '@material-ui/core/Grid';
+import Footer from '../components/Footer.component';
+import MenuMaker from '../components/MenuMaker';
+import RestroDetail from '../components/RestroDetail'
 const Homepage = () => {
     return ( 
         <div className="home-page">
-            <HeaderContainer/>
-            <PhotoUpload />
+            <HeaderContainer page = "Complete your Profile "/>
+
+            <Grid container spacing={3}>
+                <Grid item xs={12}>
+                    <CoverImage />
+                </Grid>
+            </Grid>
             <ProfileImage />
-            <MenuCard />
+            <RestroDetail/>
+                    <MenuCard />
+                    <MenuMaker />
+            <Footer/>
         </div>
      );
 }
